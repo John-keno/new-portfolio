@@ -56,7 +56,7 @@ export default function Projects(): React.JSX.Element {
 												isEven ? "lg:ml-[-20%]" : "lg:w-[calc(100%+20%)]"
 											}`}
 										>
-											<p className="text-white/90 text-base lg:text-lg leading-relaxed">
+											<p className="text-white/90 drop-shadow-xs drop-shadow-background text-base lg:text-lg leading-relaxed">
 												{project.description}
 											</p>
 										</div>

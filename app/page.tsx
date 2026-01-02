@@ -6,14 +6,14 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
 export default function Home(): React.JSX.Element {
-  return (
-    <main className="min-h-screen bg-background text-white">
-      <Header />
-      <Banner />
-      <Experience />
-      <About />
-      <Projects />
-      <Footer />
-    </main>
-  );
+	return (
+		<main className="min-h-screen bg-background text-white">
+			<Header />
+			<Banner />
+			<Experience />
+			<About />
+			<Projects />
+			<Footer />
+		</main>
+	);
 }

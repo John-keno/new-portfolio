@@ -68,9 +68,9 @@ export default function Banner(): React.JSX.Element {
 								alt="Arrow pointer"
 								width={100}
 								height={100}
-								className="absolute -left-24 -top-12 w-auto h-auto"
+								className="absolute -left-28 -top-4.5 w-auto h-auto"
 							/>
-							<div className="relative bottom-8">
+							<div className="relative">
 								<p className="text-white text-lg">
 									Hello! I Am <span className="text-primary">John Iweh</span>
 								</p>
