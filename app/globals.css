@@ -5,7 +5,6 @@
 	--color-background: #110720;
 	--color-foreground: #ffffff;
 	--color-primary: theme(--color-blue-400);
-	--font-sans: var(--font-poppins), Arial, Helvetica, sans-serif;
 }
 
 /* Base resets and global tweaks */

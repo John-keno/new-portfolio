@@ -1,52 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { ReactTyped } from "react-typed";
 
 export default function Banner(): React.JSX.Element {
-	const texts = [
+	const rolesText: string[] = [
+		"Frontend Developer",
+		"Backend Developer",
 		"Software Engineer",
-		"UI/UX Designer",
 		"React Native Developer",
+		"Embedded Systems Engineer",
 	];
-	const [currentTextIndex, setCurrentTextIndex] = useState(0);
-	const [displayedText, setDisplayedText] = useState("");
-	const [isDeleting, setIsDeleting] = useState(false);
-	const [typingSpeed, setTypingSpeed] = useState(100);
 
-	useEffect(() => {
-		const currentText = texts[currentTextIndex];
-
-		if (!isDeleting) {
-			// Typing effect
-			if (displayedText.length < currentText.length) {
-				const timeout = setTimeout(() => {
-					setDisplayedText(currentText.slice(0, displayedText.length + 1));
-				}, typingSpeed);
-				return () => clearTimeout(timeout);
-			} else {
-				// Finished typing, wait before deleting
-				const timeout = setTimeout(() => {
-					setIsDeleting(true);
-					setTypingSpeed(50); // Faster deletion
-				}, 2000);
-				return () => clearTimeout(timeout);
-			}
-		} else {
-			// Deleting effect
-			if (displayedText.length > 0) {
-				const timeout = setTimeout(() => {
-					setDisplayedText(currentText.slice(0, displayedText.length - 1));
-				}, typingSpeed);
-				return () => clearTimeout(timeout);
-			} else {
-				// Finished deleting, move to next text
-				setIsDeleting(false);
-				setTypingSpeed(100); // Reset typing speed
-				setCurrentTextIndex((prev) => (prev + 1) % texts.length);
-			}
-		}
-	}, [displayedText, isDeleting, currentTextIndex, texts, typingSpeed]);
 	return (
 		<section
 			id="home"
@@ -57,22 +22,21 @@ export default function Banner(): React.JSX.Element {
 					{/* Left side - Text content */}
 					{/* Right side - Character image */}
 					<div className="flex justify-center lg:justify-end relative w-full lg:w-auto">
-						<div className="relative top-10">
+						<div className="relative top-1">
 							{/* Mobile: Hello text positioned on top of image */}
-							<div className="lg:hidden  -top-150 z-10">
+							<div className="lg:hidden -top-150 z-10">
 								<div className="relative inline-block ">
 									<Image
 										src="/assets/arrow.png"
 										alt="Arrow pointer"
 										width={80}
 										height={80}
-										className="absolute top-5 rotate-z-280"
-										style={{ width: "auto", height: "auto" }}
+										className="absolute top-5 rotate-z-280 w-auto h-auto"
 									/>
 									<div className="relative">
 										<p className="text-white text-lg whitespace-nowrap">
 											Hello! I Am{" "}
-											<span className="text-purple-400">Ibrahim Memon</span>
+											<span className="text-primary">John Iweh</span>
 										</p>
 									</div>
 									<div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white/10"></div>
@@ -80,25 +44,23 @@ export default function Banner(): React.JSX.Element {
 							</div>
 							<Image
 								src="/assets/me.png"
-								alt="Ibrahim Memon - Software Engineer and Designer"
+								alt="John Iweh - Software Engineer and Firmware developer"
 								width={300}
 								height={300}
-								className=" max-w-md absolute"
-								style={{ width: "auto", height: "auto" }}
+								className=" max-w-sm absolute w-[300px] h-[300px] rounded-3xl"
 								priority
 							/>
 							<Image
 								src="/assets/me-glow.png"
-								alt="Ibrahim Memon - Software Engineer and Designer"
+								alt="John Iweh - Software Engineer and Firmware developer"
 								width={300}
 								height={300}
-								className="max-w-md "
-								style={{ width: "auto", height: "auto" }}
+								className="max-w-md"
 								priority
 							/>
 						</div>
 					</div>
-					<div className="flex-1 space-y-6 text-center lg:text-left">
+					<div className="flex-1 space-y-6 text-center lg:text-left lg:pl-10">
 						{/* Desktop: Hello text in original position */}
 						<div className="hidden lg:inline-block relative">
 							<Image
@@ -106,13 +68,7 @@ export default function Banner(): React.JSX.Element {
 								alt="Arrow pointer"
 								width={100}
 								height={100}
-								className="absolute "
-								style={{
-									left: "-100px",
-									top: "-50px",
-									width: "auto",
-									height: "auto",
-								}}
+								className="absolute -left-24 -top-12 w-auto h-auto"
 							/>
 							<div className="relative bottom-8">
 								<p className="text-white text-lg">
@@ -149,8 +105,13 @@ export default function Banner(): React.JSX.Element {
 				</div>
 				<div className="space-y-3 pt-15 text-center lg:text-left">
 					<p className="text-5xl text-white font-bold">
-						I&apos;m a {displayedText}
-						<span className="animate-pulse">|</span>
+						I&apos;m a &nbsp;
+						<ReactTyped
+							strings={rolesText}
+							typeSpeed={100}
+							backSpeed={100}
+							loop
+						/>
 					</p>
 					<p className="text-lg lg:text-xl text-white/90 tracking-wide flex flex-wrap items-center justify-center lg:justify-start gap-2">
 						<span>Currently, I&apos;m a Software Engineer at</span>
@@ -159,9 +120,11 @@ export default function Banner(): React.JSX.Element {
 						</span>
 					</p>
 					<p className="text-lg text-white/80 max-w-2xl mt-15 mx-auto lg:mx-0">
-						A self-taught UI/UX designer, functioning in the industry for 3+
-						years now. I make meaningful and delightful digital products that
-						create an equilibrium between user needs and business goals.
+						A Full Stack Web Developer and Software Engineer from Nigeria
+						passionate about crafting responsive interfaces, building scalable
+						backend systems, and developing embedded firmware. As a freelance
+						developer, I deliver tailored, performance-driven software solutions
+						designed to elevate user experience and functionality.
 					</p>
 				</div>
 			</div>
