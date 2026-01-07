@@ -11,18 +11,18 @@ interface Project {
 const featuredProjects: Project[] = [
 	{
 		id: 1,
-		title: "NeuraWeb – Futuristic AI Website Landing Design",
+		title: "Tutera — Empowering Educators with White‑Label LMS",
 		description:
-			"A sleek, dark-themed AI-powered landing page concept built in Figma. Designed for modern startups and futuristic digital products, it features glowing neon visuals, immersive UI, and a dynamic tone. The design encapsulates the cutting-edge possibilities of AI and tech, offering a glimpse into the future of online experiences for tech-forward companies.",
-		link: "https://www.figma.com/community/file/1441377868897233703/ai-website-landing-design",
+			"Tutera is an online learning management platform designed to empower educators, creators, and institutions in Africa. It gives them ownership of their teaching, branding, and earnings by providing a white‑label LMS where instructors can instantly launch their own academy, customize the look and feel, and monetize their content.",
+		link: "https://tuteraafrica.xyz",
 		image: "/projects/project-1.png",
 	},
 	{
 		id: 2,
-		title: "Apple Vision Pro – HR Software Design",
+		title: "Gbese — Peer‑to‑Peer Loan Transfers for Financial Freedom",
 		description:
-			"A futuristic HR software concept designed for Apple Vision Pro, built in Figma to reimagine attendance, leave tracking, and employee experience - all in one immersive interface.",
-		link: "https://www.figma.com/community/file/1371824014208363481/apple-vision-pro-hr-software-design",
+			"Gbese is a fintech website that enables peer‑to‑peer loan transfers. It gives people a transparent and community‑driven way to manage debt and access credit outside traditional banking systems, promoting financial freedom and inclusion.",
+		link: "https://gbese-alpha.vercel.app",
 		image: "/projects/project-2.png",
 	},
 ];
@@ -56,7 +56,7 @@ export default function Projects(): React.JSX.Element {
 												isEven ? "lg:ml-[-20%]" : "lg:w-[calc(100%+20%)]"
 											}`}
 										>
-											<p className="text-white/90 drop-shadow-xs drop-shadow-background text-base lg:text-lg leading-relaxed">
+											<p className="text-white/90 drop-shadow-xs drop-shadow-background text-base lg:text-lg leading-relaxed whitespace-pre-line">
 												{project.description}
 											</p>
 										</div>

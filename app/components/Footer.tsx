@@ -1,5 +1,11 @@
-import Link from "next/link";
+
+
+
+
 import { FaSquareXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { TbFileCv } from "react-icons/tb";
+import TooltipLink from "./footer/TooltipLink";
+
 
 export default function Footer(): React.JSX.Element {
 	return (
@@ -22,36 +28,39 @@ export default function Footer(): React.JSX.Element {
 						iwehjohn@gmail.com
 					</a>
 				</div>
-
 				{/* Social Media Icons */}
 				<div className="flex justify-center gap-6 mt-12">
-					<Link
+					<TooltipLink
 						href="https://x.com/IwehJohn/"
+						label="Twitter"
+						tooltip="Follow me on X (Twitter)"
 						target="_blank"
-						rel="noopener noreferrer"
-						className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/50 transition-all"
-						aria-label="Instagram"
 					>
 						<FaSquareXTwitter className="w-5 h-5" />
-					</Link>
-					<Link
+					</TooltipLink>
+					<TooltipLink
 						href="https://github.com/john-keno"
+						label="GitHub"
+						tooltip="Check out my GitHub"
 						target="_blank"
-						rel="noopener noreferrer"
-						className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/50 transition-all"
-						aria-label="GitHub"
 					>
 						<FaGithub className="w-5 h-5" />
-					</Link>
-					<Link
+					</TooltipLink>
+					<TooltipLink
 						href="https://www.linkedin.com/in/john-keno-iweh/"
+						label="LinkedIn"
+						tooltip="Connect on LinkedIn"
 						target="_blank"
-						rel="noopener noreferrer"
-						className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/50 transition-all"
-						aria-label="LinkedIn"
 					>
 						<FaLinkedin className="w-5 h-5" />
-					</Link>
+					</TooltipLink>
+					<TooltipLink
+						href="https://docs.google.com/uc?export=download&id=1N7xBr9n0PZXnVuZBfyJ4K6qV9R04kmr7"
+						label="Download CV"
+						tooltip="Download my CV"
+					>
+						<TbFileCv className="w-5 h-5" />
+					</TooltipLink>
 				</div>
 
 				<div className="text-center mt-12 pt-8 border-t border-white/10">

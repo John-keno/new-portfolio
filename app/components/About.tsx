@@ -21,6 +21,7 @@ export default function About(): React.JSX.Element {
 					width={800}
 					height={800}
 					className="object-cover mx-auto w-auto h-auto"
+					priority
 				/>
 			</div>
 		</section>

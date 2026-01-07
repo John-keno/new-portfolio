@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 export default function Header(): React.JSX.Element {
 	return (
@@ -6,9 +7,18 @@ export default function Header(): React.JSX.Element {
 				<div className="container mx-auto max-w-6xl flex items-center justify-between h-full">
 					<Link
 						href="/"
-						className="font-semibold text-3xl decoration-none max-lg:text-2xl"
+						className="flex items-center gap-2 font-semibold text-3xl decoration-none max-lg:text-xl"
 					>
-						<span className="text-primary">John</span> Iweh
+						<Image
+							src="/logo/logo.svg"
+							className="bg-white rounded-full p-0.5"
+							alt="Logo"
+							width={50}
+							height={50}
+						/>
+						<div className="max-lg:hidden">
+							<span className="text-primary ">John</span> Iweh
+						</div>
 					</Link>
 					<ul className="flex items-center gap-8 list-none m-0 p-0">
 						<li className="m-0 p-0">

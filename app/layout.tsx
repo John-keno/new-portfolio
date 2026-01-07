@@ -12,6 +12,7 @@ const rubik = Rubik({
 });
 
 export const metadata: MetadataType = {
+	metadataBase: new URL("https://devjohnkeno.com.ng"),
 	title: "John Keno Iweh | Portfolio",
 	description:
 		"Full Stack Web Developer and Software Engineer from Nigeria passionate about crafting responsive interfaces, building scalable backend systems, and developing embedded firmware. As a freelance developer, I deliver tailored, performance-driven software solutions designed to elevate user experience and functionality.",
@@ -26,22 +27,23 @@ export const metadata: MetadataType = {
 		"firmware Developer",
 		"Portfolio",
 	],
-	authors: { name: "Ibrahim Memon" },
+	authors: { name: "John Keno Iweh" },
 	creator: "John Keno Iweh",
 	publisher: "John Keno Iweh",
 	openGraph: {
 		type: "website",
 		locale: "en_US",
 		url: "https://devjohnkeno.com.ng",
-		title: "Ibrahim Memon - Software Engineer & UI/UX Designer",
+		title: "John keno Iweh- Software Engineer & firmware Developer",
 		description:
-			"A self-taught UI/UX designer and Software Engineer at WebHR. Creating meaningful and delightful digital products.",
-		siteName: "Ibrahim Memon Portfolio",
+			"Passionate about crafting responsive interfaces, building scalable backend systems, and performance-driven software solutions designed to elevate user experience and functionality.",
+		siteName: "John keno Iweh | Portfolio",
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "John Keno Iweh | Software Engineer & Firmware Developer",
-		description: "A Software Engineer & Firmware Developer",
+		description:
+			"Passionate about crafting responsive interfaces, building scalable backend systems, and performance-driven software solutions designed to elevate user experience and functionality.",
 	},
 	robots: {
 		index: true,
